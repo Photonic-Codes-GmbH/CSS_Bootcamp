@@ -35,14 +35,14 @@ header h2 {
 /* END HEADER STUFF */
 
 /* NAVIGATION STUFF */
-/* navigation rules */
 button#hamburgerBtn {
   background: none;
   border: none;
   color: #fff;
   font-size: 2.4rem;
   cursor: pointer;
-  padding: 0 30px 0 2vw;
+  text-align: left;
+  padding: 10px;
 }
 nav {
   background-color: #23cfa7;
@@ -50,9 +50,19 @@ nav {
 nav ul {
   margin: 0;
   padding: 0;
+  display: none;
+}
+nav ul.open {
+  display: block;
 }
 nav li {
   list-style-type: none;
+}
+nav li.active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+nav li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 nav a {
@@ -62,19 +72,6 @@ nav a {
   text-align: center;
   text-decoration: none;
 }
-nav li.active {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-nav li:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-nav ul.open {
-  display: block;
-}
-nav ul {
-  display: none;
-}
-
 /* END NAVIGATION STUFF */
 
 /* MAIN STUFF */
@@ -136,18 +133,15 @@ footer li {
   nav li {
     padding: 5px 10px;
   }
+
+  nav a {
+    padding: 0.7rem 1rem;
+  }
 } /* end of media query */
 
 /* Screens greater than 1024px width */
 @media only screen and (min-width: 1024px) {
   .column {
     flex-basis: 25%;
-  }
-
-  nav li {
-    width: auto;
-  }
-  nav a {
-    padding: 0.7rem 1rem;
   }
 } /* end of media query */
