@@ -1,24 +1,81 @@
-/* Gilt für alle Breiten */
+/* For all screens */
 body {
   font-family: sans-serif;
 }
 
+/* HEADER STUFF */
+header {
+  background-color: #9b87b8;
+}
+header img {
+  height: 85px;
+  padding-right: 10px;
+}
+header h1, header h2 {
+  margin: 0;
+  color: #fff;
+  font-weight: 300;
+  font-style: italic;
+}
+header h1 {
+  padding: 0.5rem 0 0 0;
+  font-size: 1.95rem;
+}
+header h2 {
+  padding: 0.2rem 0 0 0;
+  font-size: 1.05rem;
+}
+header div {
+  display: flex;
+  justify-self: flex-end;
+  align-items: flex-end;
+}
+/* END HEADER STUFF */
 
-/* Gilt ab 768px breite */
+.limited {
+  max-width: 1140px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.column { margin: 0 0 .75rem 0; }
+
+/* FOOTER STUFF */
+footer {
+  background-color: #9b87b8;
+  font-size: 1.2rem;
+}
+footer h2 {
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 1rem 0 0.3rem 0;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer li {
+  padding-bottom: 0.3rem;
+}
+
+/* Screens greater than 768px width */
 @media only screen and (min-width: 768px) {
-
-  body {
-    color: green;
+  .row {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
+  .column {
+    flex-basis: 50%;
+  }
 } /* end of media query */
 
-
-/* Gilt ab 1024px breite */
+/* Screens greater than 1024px width */
 @media only screen and (min-width: 1024px) {
-
-  body {
-    color: red;
+  .column {
+    flex-basis: 25%;
   }
-
 } /* end of media query */
