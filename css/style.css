@@ -84,8 +84,15 @@ nav a {
   flex-direction: column;
   margin: auto;
 }
-.column {
-  margin: 0 0 0.75rem 0;
+
+.padding{
+
+  padding: 10px;
+}
+
+main img {
+  width: 100%;
+  height: auto;
 }
 
 /* FOOTER STUFF */
