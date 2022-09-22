@@ -85,14 +85,41 @@ nav a {
   margin: auto;
 }
 
-.padding{
-
+.padding {
   padding: 10px;
 }
 
 main img {
   width: 100%;
   height: auto;
+}
+
+main h1 {
+  color: #9b87b8;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.labeled {
+  position: relative;
+}
+.labeled h6,
+.labeled p {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  width: 100%;
+  padding: 0.3rem 1rem;
+}
+.labeled h6 {
+  top: 0;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.labeled p {
+  bottom: 0;
+  font-weight: 700;
+  color: #b00;
 }
 
 /* FOOTER STUFF */
@@ -119,10 +146,10 @@ footer li {
   .row {
     flex-direction: row;
     flex-wrap: wrap;
-  }
+  } /* = flex-flow: row wrap */
 
   .column {
-    flex-basis: 50%;
+    flex-basis: calc(50% - 5px);
   }
 
   nav button {
@@ -144,11 +171,28 @@ footer li {
   nav a {
     padding: 0.7rem 1rem;
   }
+
+  .space-between{
+
+    gap: 10px;
+  }
+
+  .centered{
+
+    align-items: center;
+    gap: 10px;
+  }
 } /* end of media query */
 
 /* Screens greater than 1024px width */
 @media only screen and (min-width: 1024px) {
+
   .column {
     flex-basis: 25%;
   }
+
+  main .column {
+    flex-basis: calc(50% - 5px);
+  }
+
 } /* end of media query */
