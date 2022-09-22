@@ -29,6 +29,7 @@ header h2 {
 .headercontent {
   display: flex;
   justify-content: flex-start;
+  margin: auto;
 }
 /* END HEADER STUFF */
 
